@@ -1,0 +1,29 @@
+{
+  "name": "nodejsexam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "setup": "node setup.js",
+    "migrate": "node -e \"require('dotenv').config(); require('./database/migrate')().then(() => process.exit(0))\"",
+    "seed": "node -e \"require('dotenv').config(); require('./database/seed')().then(() => process.exit(0))\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "file-type": "^16.5.4",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.1",
+    "mysql2": "^3.22.2",
+    "nodemon": "^3.1.14",
+    "sequelize": "^6.37.8"
+  }
+}
