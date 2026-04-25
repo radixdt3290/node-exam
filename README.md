@@ -11,7 +11,7 @@ To get the project running, execute the following commands in order:
 ## API Endpoints
 
 ### Authentication
-* **POST /api/auth/register**: Register a new user with password complexity rules. Supports admin creation via secret key.
+* **POST /api/auth/register**: Register a new user with password complexity rules. Supports admin creation via secret key. (e.g. register as admin to pass "secret" : "admin")
 * **POST /api/auth/login**: Authenticate user and return a JWT Bearer token.
 
 ### Books
@@ -35,3 +35,11 @@ To get the project running, execute the following commands in order:
 * **POST /api/reviews/:bookId**: [Auth] Post a 1-5 star review. Enforces one review per book per user.
 * **GET /api/reviews/:bookId**: Public list of all reviews for a specific book.
 * **DELETE /api/reviews/:id**: [Auth] Delete own review, or any review if Admin.
+
+
+### Set ENV
+* **DB_NAME** : database name
+* **DB_USERNAME** : Database user name
+* **DB_PASSWORD** : Database password
+* **JWT_SECRET** : Jwt secret
+* **REGISTER_SECRET** : admin (To register as admin secret)
